@@ -1,51 +1,9 @@
 .l-img-wrapper {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: #aeaeae;
+  background-color: lightgray;
 }
-
-.l-img-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto auto;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABAUlEQVQ4T6WSzyrEYRSGn2crF6GmJJTsLLGyEVM2lAshdriUsbAwsWeWlpJ/Kck1KNtXM330G8b84due8z7fed9z5J/P3/RJNoCDUt9XT3r1/gAkmVSfktwB00V0r84MBCS5AJaAc6A2EiDJOPBW+WUb2KtaSDKr3lYn6bKQ5AxYBS7V5WHy/QIkWSmCV/VhGHG7pwNIsg6cFlFdbfbZzlRHqI9VwCbQKKIt9bgPYKEArqqAMWCriBrq+0gWPpuTzAG7wKF68x2SpKY+99tC2/sa0FTr1cYkE8ALMK9ef9a+r7F9RDvAkdpK0ip+F0vY/SfoMXIXYOApDxvcrxn8BfABIiRjEYfmQAcAAAAASUVORK5CYII=') no-repeat;
-  background-position: center center;
-  background-size: contain;
-  animation: loadpic .5s infinite linear;
-  z-index: 1;
-}
-
-@keyframes loadpic {
-  from {
-    transform: rotate(0)
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .l-img {
-  position: relative;
   height: 100%;
   width: 100%;
-  z-index: 2;
-
+  object-fit: cover;
 }
 
-.l-img::before {
-  /* 关键是这句 */
-  content: '图片加载失败 ';
-
-  /* 下面都是辅助的样式代码 */
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #eaeaea;
-  color: indianred;
-}
