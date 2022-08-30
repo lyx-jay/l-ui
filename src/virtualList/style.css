@@ -1,0 +1,31 @@
+ul,li {
+  list-style-type: none;
+}
+
+.infinite-list-container {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.infinite-list-phantom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.infinite-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.infinite-list-row {
+  text-align: center;
+  margin-bottom: 28px;
+  background-color: rgb(224, 222, 222);
+  border-bottom: 1px solid gray;
+}
