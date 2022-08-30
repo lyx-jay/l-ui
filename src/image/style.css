@@ -1,5 +1,8 @@
-.l-img-wrapper {
-  background-color: lightgray;
+.l-img--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(227, 227, 227);
 }
 .l-img {
   height: 100%;

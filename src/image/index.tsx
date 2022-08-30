@@ -47,12 +47,28 @@ export default function LImage({src, loader, unloader, ...rest}:ImageProps):JSX.
   const width = rest.width || 50;
   const height = rest.height || 50;
 
-  return (
+  if (imgSrc) {
+   return (
     <div className='l-img--wrapper' style={{width: width, height: height}}>
-      {imgSrc && <img className='l-img' src={imgSrc}/>}
-      {isLoading && loader}
-      {err && unloader}
+      <img className='l-img' src={imgSrc}/>
     </div>
-  )
+   )
+  }
+  if (isLoading) {
+    return (
+      <div className='l-img--wrapper' style={{width: width, height: height}}>
+      {loader}
+    </div>
+    )
+  }
+  if (err) {
+    return (
+      <div className='l-img--wrapper' style={{width: width, height: height}}>
+      {unloader}
+    </div>
+    )
+  }
+
+  return <></>
 
 }
